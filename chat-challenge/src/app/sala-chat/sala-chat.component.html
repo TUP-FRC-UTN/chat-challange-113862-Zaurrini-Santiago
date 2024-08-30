@@ -1,0 +1,31 @@
+<!-- sala.component.html -->
+<div class="container mt-4 border border-primary rounded p-3">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">Sala de Chat</h2>
+      <div class="card my-3">
+        <div class="card-body">
+          <h3 class="card-title">Conversación</h3>
+          <div class="mensajes mt-4">
+            @for (mensaje of mensajes; track mensaje) {
+            {{mensaje}}
+            }
+          </div>
+          <!-- Componentes de mensaje-usuario -->
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Componente para el usuario Pepe -->
+              <app-mensaje-usuario [nombreUsuario]="'Pepe'"
+                (mensajeEnviado)="agregarMensaje($event)"></app-mensaje-usuario>
+            </div>
+            <div class="col-md-6">
+              <!-- Componente para el usuario María -->
+              <app-mensaje-usuario [nombreUsuario]="'María'"
+                (mensajeEnviado)="agregarMensaje($event)"></app-mensaje-usuario>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

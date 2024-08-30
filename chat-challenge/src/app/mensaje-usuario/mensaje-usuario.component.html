@@ -1,0 +1,12 @@
+<!-- mensaje-usuario.component.html -->
+<div class="card mb-3 border border-success rounded">
+    <div class="card-body">
+      <h5 class="card-title">Usuario: {{ nombreUsuario }}</h5>
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea [(ngModel)]="mensaje" id="mensaje" rows="3" class="form-control" placeholder="Escribe tu mensaje..."></textarea>
+      </div>
+      <button (click)="enviarMensaje()" class="btn btn-primary mt-2">Guardar</button>
+    </div>
+  </div>
+  
